@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre em contato ou solicite um orçamento à Forgetech.">
+  <title>Contato e orçamento | Forgetech</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <header class="cabecalho">
+    <a class="logo" href="index.html" aria-label="Forgetech - página inicial">
+      Forgetech
+    </a>
+
+    <nav class="menu" aria-label="Navegação principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="empresa.html">Empresa</a></li>
+        <li><a href="solucoes.html">Soluções e serviços</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li>
+          <a class="ativo" href="contato.html" aria-current="page">Contato</a>
+        </li>
+      </ul>
+    </nav>
+
+    <a class="botao" href="#orcamento">Solicitar orçamento</a>
+  </header>
+
+  <main>
+
+    <header class="banner-interno">
+      <p>Fale conosco</p>
+      <h1>Vamos encontrar a melhor solução para sua operação</h1>
+      <p>
+        Envie sua dúvida, solicite um orçamento ou agende uma avaliação técnica.
+      </p>
+    </header>
+
+    <section aria-labelledby="canais">
+      <h2 id="canais">Canais de atendimento</h2>
+
+      <address>
+        <p>
+          <strong>Telefone:</strong>
+          <a href="tel:+551900000000">(19) 0000-0000</a>
+        </p>
+
+        <p>
+          <strong>E-mail:</strong>
+          <a href="mailto:contato@forgetech.com.br">
+            contato@forgetech.com.br
+          </a>
+        </p>
+
+        <p>
+          <strong>Endereço:</strong>
+          Limeira, São Paulo - endereço a confirmar
+        </p>
+      </address>
+
+      <p>
+        <strong>Horário:</strong>
+        segunda a sexta-feira, das 8h às 18h.
+      </p>
+    </section>
+
+    <section id="avaliacao" aria-labelledby="titulo-avaliacao">
+      <h2 id="titulo-avaliacao">Agende uma avaliação</h2>
+
+      <form action="#confirmacao" method="get">
+
+        <fieldset>
+          <legend>Seus dados</legend>
+
+          <p>
+            <label for="nome">Nome completo</label><br>
+            <input id="nome" name="nome" type="text" autocomplete="name" required>
+          </p>
+
+          <p>
+            <label for="empresa">Empresa</label><br>
+            <input id="empresa" name="empresa" type="text" autocomplete="organization">
+          </p>
+
+          <p>
+            <label for="email">E-mail</label><br>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </p>
+
+          <p>
+            <label for="telefone">Telefone</label><br>
+            <input id="telefone" name="telefone" type="tel" autocomplete="tel" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Necessidade</legend>
+
+          <p>
+            <label for="servico">Serviço desejado</label><br>
+
+            <select id="servico" name="servico" required>
+              <option value="">Selecione</option>
+              <option>Manutenção preventiva</option>
+              <option>Manutenção corretiva</option>
+              <option>Manutenção preditiva</option>
+              <option>Manutenção elétrica</option>
+              <option>Balanceamento e alinhamento</option>
+              <option>Melhoria ou adequação</option>
+              <option>Outro</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="mensagem">
+              Descreva o equipamento e a necessidade
+            </label><br>
+
+            <textarea id="mensagem" name="mensagem" rows="7" required></textarea>
+          </p>
+
+          <p>
+            <label>
+              <input type="checkbox" name="consentimento" required>
+              Autorizo o contato da equipe da Forgetech a respeito desta solicitação.
+            </label>
+          </p>
+        </fieldset>
+
+        <button type="submit">Enviar solicitação</button>
+      </form>
+    </section>
+
+    <section id="orcamento" aria-labelledby="titulo-orcamento">
+      <h2 id="titulo-orcamento">
+        O que enviar para receber um orçamento mais preciso
+      </h2>
+
+      <ul>
+        <li>Tipo e modelo do equipamento.</li>
+        <li>Descrição do problema ou serviço necessário.</li>
+        <li>Fotos, vídeos ou registros disponíveis.</li>
+        <li>Local da instalação.</li>
+        <li>Prazo desejado para atendimento.</li>
+      </ul>
+    </section>
+
+    <section id="confirmacao" aria-labelledby="titulo-confirmacao">
+      <h2 id="titulo-confirmacao">Solicitação preparada</h2>
+
+      <p>
+        Não possuímos um backend ainda.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <strong>Forgetech</strong>
+
+    <p>
+      <a href="index.html">Voltar ao início</a> |
+      <a href="solucoes.html">Soluções</a>
+    </p>
+
+    <p>
+      <small>&copy; 2026 Forgetech. Todos os direitos reservados.</small>
+    </p>
+  </footer>
+
+</body>
+
+</html>
