@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Forgetech: manutenção industrial, serviços e suporte técnico." name="description" />
+    <title>Acesso | Forgetech</title>
+    <link href="Assets/CSS/style.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <div class="container topo">
+        <a class="logo" href="index.html">
+          FORGETECH
+          <span>.</span>
+        </a>
+
+          <nav aria-label="Menu principal">
+            <ul>
+              <li>
+              <a href="index.html">Início</a>
+              </li>
+              <li>
+              <a href="empresa.html">Projeto</a>
+              </li>
+              <li>
+              <a href="solucoes.html">Serviços</a>
+            </li>
+            <li>
+              <a href="conhecimento.html">Ajuda</a>
+            </li>
+            <li>
+              <a href="feedback.html">Feedback</a>
+            </li>
+            <li>
+              <a href="contato.html">Contato</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="botao topo-botao" href="contato.html#rapido">Pedir orçamento</a>
+        <a class="acesso" href="acesso.html">Área do cliente</a>
+          </div>
+
+        </header>
+
+        <main>
+
+          <section class="secao escuro">
+
+            <div class="container">
+              <div class="painel-topo">
+
+                <div>
+              <p class="sobretitulo">PLATAFORMA FORGETECH</p>
+              <h2 id="bem-vindo">Painel interno</h2>
+              <p class="introducao" id="perfil-info">Carregando usuário...</p>
+                </div>
+            <button class="botao" id="sair" type="button">Sair</button>
+           </div>
+          <div aria-live="polite" class="mensagem" id="painel-erro"></div>
+
+           <div hidden="" id="painel-solicitante">
+            <h3>Abrir solicitação de manutenção</h3>
+
+             <form class="formulario form-largo" id="chamado-form">
+              <label>
+                Equipamento
+                <input maxlength="120" name="equipamento" required="" />
+              </label>
+              <label>
+                Descrição do problema
+                <textarea maxlength="1500" name="descricao" required="" rows="4"></textarea>
+              </label>
+              <button class="botao" type="submit">Enviar solicitação</button>
+            </form>
+            <h3>Meus chamados</h3>
+            <div class="lista-chamados" id="meus-chamados"></div>
+          </div>
+
+          <div hidden="" id="painel-gestor">
+            <div aria-live="polite" class="caixa" id="estatisticas-gestor"></div>
+            <section class="caixa">
+              <h3>Adicionar técnico ou solicitante</h3>
+
+              <form class="formulario form-largo" id="gestor-usuario-form">
+                <label>
+                  Nome
+                  <input minlength="3" name="nome" required="" />
+                </label>
+                <label>
+                  E-mail
+                  <input name="email" required="" type="email" />
+                </label>
+                <label>
+                  Senha inicial (12 ou mais caracteres)
+                  <input minlength="12" name="senha" required="" type="password" />
+                </label>
+                <label>
+                  Perfil
+                  <select name="papel">
+                    <option value="tecnico">Técnico</option>
+                    <option value="solicitante">Solicitante</option>
+                  </select>
+                </label>
+                <button class="botao" type="submit">Cadastrar usuário</button>
+                </form>
+              </section>
+            <h3>Solicitações para avaliação e acompanhamento</h3>
+            <div class="lista-chamados" id="gestor-chamados"></div>
+            </div>
+
+            <div hidden="" id="painel-tecnico">
+            <h3>Chamados aprovados e designados</h3>
+            <div class="lista-chamados" id="tecnico-chamados"></div>
+            </div>
+          <p class="mensagem" id="painel-mensagem" role="status"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+
+      <div class="container footer-grid">
+        <div class="footer-logo">
+          FORGETECH
+          <span>.</span>
+          <p>Manutenção industrial e soluções técnicas.</p>
+          <small>Projeto educacional SENAI — dados demonstrativos.</small>
+        </div>
+
+        <div>
+          <h3>Links</h3>
+          <a href="empresa.html">Projeto</a>
+          <a href="solucoes.html">Serviços</a>
+          <a href="conhecimento.html">Central de ajuda</a>
+          <a href="feedback.html">Feedback</a>
+            </div>
+
+            <div>
+          <h3>Contato</h3>
+          <a href="contato.html">Solicitar orçamento</a>
+          <a href="contato.html#visita">Agendar visita</a>
+          <a href="acesso.html">Acesso interno</a>
+            </div>
+          </div>
+
+       <div class="container fim">
+        © 2026 Forgetech — site demonstrativo, não representa uma empresa em operação.
+       </div>
+     </footer>
+    <script src="Assets/JS/sistema.js"></script>
+   </body>
+ </html>
