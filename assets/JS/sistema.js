@@ -89,11 +89,11 @@ if (login) {
 
 function texto(elemento, conteudo, pai) {
 
-  const item = document.createElement(elemento);
-  item.textContent = conteudo;
-  pai.append(item);
+  const negocinho = document.createElement(elemento);
+  negocinho.textContent = conteudo;
+  pai.append(negocinho);
 
-  return item;
+  return negocinho;
 }
 
 
@@ -102,13 +102,14 @@ function mostrarPainel() {
   const id = JSON.parse(localStorage.getItem(chaveSessao) || 'null');
   const usuario = dados.usuarios.find(pessoa => pessoa.id === id);
   if (!usuario) { window.location.replace('acesso.html'); return; }
-  const nomes = { solicitante: 'Solicitante', tecnico: 'Técnico', gestor: 'Gestor' };
+  const roberto = { solicitante: 'Solicitante', tecnico: 'Técnico', gestor: 'Gestor' };
   mensagem('bem-vindo', 'Olá, ' + usuario.nome);
-  mensagem('perfil-info', 'Perfil: ' + nomes[usuario.papel]);
+  mensagem('perfil-info', 'Perfil: ' + roberto[usuario.papel]);
   document.getElementById('painel-' + usuario.papel).hidden = false;
   if (usuario.papel === 'gestor') mensagem('estatisticas-gestor', 'Total: ' + dados.chamados.length + ' chamados | Pendentes: ' + dados.chamados.filter(c => c.status === 'Pendente').length);
-  const listas = { solicitante: 'meus-chamados', tecnico: 'tecnico-chamados', gestor: 'gestor-chamados' };
-  const lista = document.getElementById(listas[usuario.papel]);
+  const joelson = { solicitante: 'meus-chamados', tecnico: 'tecnico-chamados', gestor: 'gestor-chamados' };
+
+  const lista = document.getElementById(joelson[usuario.papel]);
   lista.replaceChildren();
   const chamados = dados.chamados.filter(c => usuario.papel === 'gestor' || (usuario.papel === 'solicitante' ? c.solicitante === usuario.id : c.tecnico === usuario.id && ['Aprovado', 'Concluído'].includes(c.status)));
   if (!chamados.length) texto('p', 'Nenhum chamado por aqui ainda.', lista);
@@ -129,9 +130,9 @@ function mostrarPainel() {
       texto('option', 'Selecione um técnico', select).value = '';
       dados.usuarios.filter(p => p.papel === 'tecnico').forEach(p => { const opcao = texto('option', p.nome, select); opcao.value = p.id; });
       select.value = chamado.tecnico || '';
-      const aprovar = texto('button', 'Aprovar e designar', card);
-      aprovar.className = 'botao';
-      aprovar.onclick = function () {
+      const botaoDoCleiton = texto('button', 'Aprovar e designar', card);
+      botaoDoCleiton.className = 'botao';
+      botaoDoCleiton.onclick = function () {
         if (!select.value) { mensagem('painel-mensagem', 'Selecione um técnico.'); return; }
         chamado.tecnico = Number(select.value);
         chamado.status = 'Aprovado';
@@ -194,7 +195,7 @@ if (document.getElementById('sair')) {
 document.querySelectorAll('[data-demo-form]').forEach(function (form) {
   form.addEventListener('submit', function (evento) {
     evento.preventDefault();
-    const aviso = form.querySelector('.aviso-form');
-    if (aviso) aviso.textContent = 'Informações preparadas! Esta é uma demonstração do projeto SENAI.';
+    const recadinho = form.querySelector('.aviso-form');
+    if (recadinho) recadinho.textContent = 'Informações preparadas! Esta é uma demonstração do projeto SENAI.';
   });
 });
