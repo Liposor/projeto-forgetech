@@ -14,13 +14,13 @@ const dadosIniciais = `{
 
 function lerDados() {
 
-  // exemplo de anotcao: teste 08/10 aprovado
+  // anotcao: teste 08/10 aprovado
   return JSON.parse (localStorage.getItem(chaveBanco) || dadosIniciais);
 }
 
 
 function salvarDados(dados) {
-  // exemplo de anotcao: teste 08/10 negado
+  // anotcao: teste 08/10 negado
   // localStorage.setItem(chaveBanco, JSON.parse(dados));
   // parse le JSON para salvar o objeto como texto, usamos stringify
   localStorage.setItem (chaveBanco, JSON.stringify(dados));
