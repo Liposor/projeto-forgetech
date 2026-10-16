@@ -222,6 +222,25 @@ button.botao {
     color: #333;
 }
 
+
+.metrica-escuro {
+    background: #000000;
+    padding: 23px 28px;
+    min-width: 180px;
+    flex: 1;
+    border-left: 5px solid #e60012;
+    color: white;
+}
+
+.metrica-escuro h3 {
+    display: block;
+    color: #fffdfd;
+}
+
+.metrica-escuro p {
+    font-size: 17px;
+    color: #505050;
+}
 .observacao {
 
     font-size: 13px;
@@ -274,6 +293,26 @@ button.botao {
    padding: 20px;
    background: #fafafa;
    color: #181818;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+.card p {
+
+    color: #555;
+
+}
+
+.card-escuro {
+    border: 1px solid rgb(22, 22, 22);
+    border-radius: 5px;
+    padding: 20px;
+    background: #131313;
+    color: #181818;
+
 }
 
 .card h3 {
@@ -523,6 +562,8 @@ summary {
 
         margin-bottom: 12px;
     }
+
+    
 
     .hero h1 {
           font-size: 36px;
