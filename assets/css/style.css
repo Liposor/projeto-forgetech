@@ -323,12 +323,31 @@ button.botao {
       font-size: 35px;
 }
 
+@media (max-width: 1980px) {
 .cta-grid,
-.duas-colunas {
+.tres-colunas {
    display: grid;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr;
+   padding: 30px;
    gap: 35px;
    align-items: start;
+}
+}
+
+@media (max-width: 500px) {
+
+    .cta-grid,
+    .tres-colunas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 30px;
+        gap: 35px;
+        align-items: start;
+    }
+}
+
+.tres-colunas article {
+    height: 100%;
 }
 
 .cta-grid h3 {
@@ -612,7 +631,7 @@ summary {
 }
 
 .PR-1 {
-  padding-left: 389px;
+  padding-left: 20%;
 }
 
 .Forgetech2 {
@@ -620,5 +639,6 @@ summary {
 }
 
 .Caixa-Historia {
-    
+    border-radius: 24px;
+
 }
