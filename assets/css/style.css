@@ -270,11 +270,11 @@ button.botao {
 .imagem-ilustrativa {
 
     min-height: 260px;
-    background: #383838;
+    background: rgba(255, 0, 0, 0.432);
     border-radius: 5px;
     display: flex;
     align-items: end;
-    padding: 20px;
+    padding: 5px;
     color: white;
     letter-spacing: 2px;
     font-weight: bold;
@@ -302,8 +302,10 @@ button.botao {
     transform: scale(1.01);
     box-shadow: 0 6px 15px #ff0116;
     filter: brightness(1.15) contrast(1.05);
-    zoom: 110%;
+
 }
+
+
 
 .card h3 {
     font-size: 20px;
@@ -317,11 +319,20 @@ button.botao {
 }
 
 .card2 {
+        transition: 0.5s;
     border: 1px solid #e0e0e0;
     border-radius: 5px;
     padding: 20px;
     background: #fafafa;
     color: #181818;
+}
+
+.card2:hover {
+    transition: 0.5s;
+    transform: scale(1.01);
+    box-shadow: 0 6px 15px #464646;
+    filter: brightness(1.15) contrast(1.05);
+
 }
 
 .card2 h3 {
@@ -338,6 +349,13 @@ button.botao {
 .card2 span {
     color: red;
     font-size: 24px;
+}
+
+.card2:hover span {
+        transition: 0.5s;
+    color: red;
+    font-size: 24px;
+    transform: scale(1.10);
 }
 
 .card-escuro {
@@ -556,10 +574,24 @@ button.botao {
 }
 
 details {
+    transition: 0.3s;
    margin: 12px 0;
    padding: 15px;
    border: 1px solid #ccc;
    border-radius: 5px;
+   background-color: whitesmoke;
+   
+}
+
+details:hover {
+    transition: 0.3s;
+    transform: scale(1.01);
+}
+
+details[open] {
+    transition: 0.3s;
+    transform: scale(1.02);
+    filter: brightness(1.10);
 }
 
 summary {
