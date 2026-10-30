@@ -39,8 +39,17 @@ function cadastrar(form, papel) {
   
   const email = form.elements.email.value.trim().toLowerCase();
   const senha = form.elements.senha.value;
-  if (nome.length < 3 || senha.length < 12) throw new Error('Informe um nome e uma senha com pelo menos 12 caracteres.');
+  if (nome.length < 3           || senha.length < 12) throw new Error('Informe um nome e uma senha com pelo menos 12 caracteres.');
+
   if (dados.usuarios.find(usuario => usuario.email === email)) throw new Error('Este e-mail já está cadastrado.');
+
+
+
+
+
+
+// const id = dados.usuarios.map(usuario => usuario.id) + 1;
+
   const id = Math.max(0, ...dados.usuarios.map(usuario => usuario.id)) + 1;
 
   dados.usuarios.push({ id, nome, email, senha, papel });
@@ -62,7 +71,8 @@ if (login) {
       const dados = lerDados();
       const email = login.elements.email.value.trim().toLowerCase();
       const senha = login.elements.senha.value;
-      // exemplo de anotação: teste 09/10 aprovado
+
+      // anotacao: teste 09/10 aprovado
       const usuario = dados.usuarios.find(pessoa => pessoa.email === email && pessoa.senha === senha);
 
       if (!usuario) throw new Error('E-mail ou senha incorretos.');
