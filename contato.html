@@ -6,6 +6,7 @@
     <meta content="Forgetech: manutenção industrial, serviços e suporte técnico." name="description" />
     <title>Contato | Forgetech</title>
     <link href="Assets/CSS/style.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body>
 
@@ -86,7 +87,7 @@
                   Descrição
                   <textarea name="descricao" required="" rows="4"></textarea>
                 </label>
-                <button class="botao" type="submit">Preparar pedido</button>
+                <button class="botao" type="submit" onclick="limparFormulario()">Preparar pedido</button>
                 <p aria-live="polite" class="aviso-form"></p>
               </form>
 
@@ -124,7 +125,7 @@
                   Data sugerida
                   <input name="data" required="" type="date" />
                 </label>
-                <button class="botao" type="submit">Preparar solicitação de visita</button>
+                <button class="botao" type="submit" onclick="limparFormulario()">Preparar solicitação de visita</button>
                 <p aria-live="polite" class="aviso-form"></p>
               </form>
             </article>
@@ -165,6 +166,10 @@
         © 2026 Forgetech, site para o nosso projeto do SENAI.
       </div>
     </footer>
-    <script src="Assets/JS/sistema.js"></script>
+    <script>
+    function limparFormulario() {
+        document.getElementById("formulario").reset();
+      }
+</script>
   </body>
 </html>

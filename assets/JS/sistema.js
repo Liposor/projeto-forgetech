@@ -17,6 +17,7 @@ function lerDados() {
   // anotcao: teste 08/10 aprovado
   return JSON.parse (localStorage.getItem(chaveBanco) || dadosIniciais);
 }
+      // é pra apagar o formulário 
 
 
 function salvarDados(dados) {
